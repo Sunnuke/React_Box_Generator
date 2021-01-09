@@ -1,5 +1,16 @@
 .App {
-  text-align: center;
+  margin-left: 40%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.box{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
 }
 
 .App-logo {
