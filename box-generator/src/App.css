@@ -1,15 +1,16 @@
 .App {
-  margin-left: 40%;
+  /* margin-left: 20%; */
 }
 
 .square {
   width: 100px;
   height: 100px;
+  text-align: center;
 }
 
 .box{
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   padding: 10px;
 }
 

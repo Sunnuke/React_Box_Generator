@@ -8,11 +8,12 @@ function App() {
   const [ state, setState ] = useState({
     boxes: []
   });
+  console.log("State:");
   console.log(state);
   return (
     <div className="App">
       <InputSquare inputs={state} setInputs={setState} />
-
+      <DisplayBox boxes={state} />
     </div>
   );
 }

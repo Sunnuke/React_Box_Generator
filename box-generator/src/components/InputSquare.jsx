@@ -10,20 +10,22 @@ const InputSquare = (props) => {
         e.preventDefault();
         const newSq = { color, size };
         console.log("New Square: ", newSq);
+        console.log("target: ", e.target);
         setInputs({
             boxes: inputs.boxes.concat(newSq)
         });
+        document.getElementById("form").reset();
     };
 
     return(
-        <form onSubmit={ makeSquare }>
+        <form id="form" onSubmit={ makeSquare }>
             <div>
                 <label>Color: </label> 
-                <input type="text" onChange={ (e) => setColor(e.target.value) } required/>
+                <input name="color" type="text" onChange={ (e) => setColor(e.target.value) } required/>
             </div>
             <div>
                 <label>Size: </label> 
-                <input type="number" onChange={ (e) => setSize(e.target.value) } />
+                <input name="size" type="number" onChange={ (e) => setSize(e.target.value) } />
             </div>
             <input type="submit" value="Make Square" />
         </form>
